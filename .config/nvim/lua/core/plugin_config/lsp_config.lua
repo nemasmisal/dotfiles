@@ -37,7 +37,7 @@ local on_attach = function(_, bufnr)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local project_library_path = "/home/work/Projects/center/"
+local project_library_path = vim.loop.cwd().."/node_modules/@angular/language-service"
 local cmd = {
   "ngserver",
   "--stdio",
@@ -56,7 +56,7 @@ lspconfig['angularls'].setup{
   cmd = cmd,
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { 'javascript', 'typescript' },
+  filetypes = { 'javascript', 'typescript', 'html' },
   on_new_config = function(new_config)
     new_config.cmd = cmd
   end,
