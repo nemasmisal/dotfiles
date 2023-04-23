@@ -1,0 +1,44 @@
+conky.config = {
+	background = false,
+	font = 'Bitstream Vera Sans:size=10',
+	use_xft = true,
+	xftalpha = 0.9,
+	update_interval = 2,
+	imlib_cache_size = 0,
+	total_run_times = 0,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+	own_window_argb_value = 30,
+	own_window_colour = '#bac3ce',
+	double_buffer = true,
+	minimum_width = 225,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = true,
+	default_shade_color = '#dcb1cb',
+	alignment = 'bottom_right',
+	gap_x = 240,
+	gap_y = 60,
+	no_buffers = true,
+	uppercase = false,
+	border_inner_margin = 15,
+	default_color = 'F9FAF9',
+
+--colors
+  color1 = "5D7B86",
+	color2 = '5D7B86',
+};
+
+conky.text = [[
+${color1}${font Oswald:size=10:bold}Memory ${color} ${hr 2}
+${voffset 5}${font sans-serif:bold:size=10}Kingstone${alignc -25}6000MT/s${alignr}1.1v
+${voffset 20}${color}Usage${font Bitstream Vera Sans:bold:size=10}$alignr$mem/$memmax
+${color3}${font Open Sans:size=5}
+${goto 40}${voffset 5}$color2${font Bitstream Vera Sans:bold:size=10}${top_mem name 1}$alignr$color${top_mem mem_res 1}
+${goto 40}$color2${top_mem name 2}$alignr$color${top_mem mem_res 2}
+${goto 40}$color2${top_mem name 3}$alignr$color${top_mem mem_res 3}
+${goto 40}$color2${top_mem name 4}$alignr$color${top_mem mem_res 4}
+]];

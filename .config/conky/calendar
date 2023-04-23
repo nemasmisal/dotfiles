@@ -1,0 +1,43 @@
+conky.config = {
+	background = false,
+	font = 'Bitstream Vera Sans:size=10',
+	use_xft = true,
+	xftalpha = 0.9,
+	update_interval = 2,
+	imlib_cache_size = 0,
+	total_run_times = 0,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+	own_window_argb_value = 30,
+	own_window_colour = '#bac3ce',
+	double_buffer = true,
+	minimum_width = 250,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = true,
+	default_shade_color = '#dcb1cb',
+	alignment = 'top_right',
+	gap_x = 870,
+	gap_y = 450,
+	no_buffers = true,
+	uppercase = false,
+	border_inner_margin = 15,
+	default_color = 'F9FAF9',
+
+--colors
+  color1 = "5D7B86",
+};
+
+conky.text = [[
+${color1}${font Bitstream Vera Sans:size=12}Week$alignr$color${font Bitstream Vera Sans:size=20}${time %U}$font
+${voffset -8}$color1${font Bitstream Vera Sans:size=22}${time %A}$font\
+${voffset -8}$alignr$color${font Bitstream Vera Sans:size=42}${time %e}$font
+$color${voffset -30}$color${font Bitstream Vera Sans:size=24}${time %b}$font\
+${voffset -3} $color${font Bitstream Vera Sans:size=26}${time %Y}$font$color1$hr
+${alignc}${font :size=28} ${time %k:%M %p}$font
+$font$color2
+${font Fira Mono:size=14}${execpi 3600 /home/nikolay/Projects/dotfiles/.config/conky/cal.lua}${font}
+]];

@@ -1,0 +1,68 @@
+conky.config = {
+	background = false,
+	font = 'Bitstream Vera Sans:size=10',
+	use_xft = true,
+	xftalpha = 0.9,
+	update_interval = 2,
+	imlib_cache_size = 0,
+	total_run_times = 0,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+	own_window_argb_value = 30,
+	own_window_colour = '#bac3ce',
+	double_buffer = true,
+	minimum_width = 225,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = true,
+	default_shade_color = '#dcb1cb',
+	alignment = 'top_right',
+	gap_x = 220,
+	gap_y = 230,
+	no_buffers = true,
+	cpu_avg_samples = 24,
+	uppercase = false,
+	border_inner_margin = 15,
+	default_color = 'F9FAF9',
+
+--colors
+  color1 = "5D7B86",
+	color2 = '5D7B86',
+};
+
+conky.text = [[
+${color1}${font Oswald:size=10:bold}CPU ${color} ${hr 2}
+${voffset 5}${font Oswald:bold:size=10}${color1}${execi 3600 grep model /proc/cpuinfo | cut -d : -f2 | tail -1 | sed 's/\s//'}
+${color3}${font Open Sans:size=10}
+CPU Clock Speed: ${alignr}${font Oswald:bold:size=10}${freq_g} GHz
+${color3}${font Open Sans:size=10}
+Usage: ${alignr}${font Oswald:bold:size=10}$cpu%
+${color3}${font Open Sans:size=10}
+${color}Core 1:   ${cpu cpu1}% ${alignr}${color1}${cpubar cpu1 6,140}
+${color}Core 2:   ${cpu cpu2}% ${alignr}${color1}${cpubar cpu2 6,140}
+${color}Core 3:   ${cpu cpu3}% ${alignr}${color1}${cpubar cpu3 6,140}
+${color}Core 4:   ${cpu cpu4}% ${alignr}${color1}${cpubar cpu4 6,140}
+${color}Core 5:   ${cpu cpu5}% ${alignr}${color1}${cpubar cpu5 6,140}
+${color}Core 6:   ${cpu cpu6}% ${alignr}${color1}${cpubar cpu6 6,140}
+${color}Core 7:   ${cpu cpu7}% ${alignr}${color1}${cpubar cpu7 6,140}
+${color}Core 8:   ${cpu cpu8}% ${alignr}${color1}${cpubar cpu8 6,140}
+${color}Core 9:   ${cpu cpu9}% ${alignr}${color1}${cpubar cpu9 6,140}
+${color}Core 10: ${cpu cpu10}% ${alignr}${color1}${cpubar cpu10 6,140}
+${color}Core 11: ${cpu cpu11}% ${alignr}${color1}${cpubar cpu11 6,140}
+${color}Core 12: ${cpu cpu12}% ${alignr}${color1}${cpubar cpu12 6,140}
+${color}Core 13: ${cpu cpu13}% ${alignr}${color1}${cpubar cpu13 6,140}
+${color}Core 14: ${cpu cpu14}% ${alignr}${color1}${cpubar cpu14 6,140}
+${color}Core 15: ${cpu cpu15}% ${alignr}${color1}${cpubar cpu15 6,140}
+${color}Core 16: ${cpu cpu16}% ${alignr}${color1}${cpubar cpu16 6,140}
+${color}Core 17: ${cpu cpu17}% ${alignr}${color1}${cpubar cpu17 6,140}
+${color}Core 18: ${cpu cpu18}% ${alignr}${color1}${cpubar cpu18 6,140}
+${color}Core 19: ${cpu cpu19}% ${alignr}${color1}${cpubar cpu19 6,140}
+${color}Core 20: ${cpu cpu20}% ${alignr}${color1}${cpubar cpu20 6,140}
+${color}Core 21: ${cpu cpu21}% ${alignr}${color1}${cpubar cpu21 6,140}
+${color}Core 22: ${cpu cpu22}% ${alignr}${color1}${cpubar cpu22 6,140}
+${color}Core 23: ${cpu cpu23}% ${alignr}${color1}${cpubar cpu23 6,140}
+${color}Core 24: ${cpu cpu24}% ${alignr}${color1}${cpubar cpu24 6,140}
+]];
