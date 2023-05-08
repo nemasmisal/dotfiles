@@ -3,7 +3,7 @@
 local conky_color = "${color1}%2d${color}"
 local t = os.date('*t', os.time())
 local year, month, currentday = t.year, t.month, t.day
-local daystart = os.date("*t",os.time{year=year,month=month,day=02}).wday
+local daystart = os.date("*t",os.time{year=year,month=month,day=00}).wday
 local days_in_month = {
     31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
 }
@@ -16,7 +16,7 @@ if LeapYear(year) then
     days_in_month[2] = 29
 end
 
-local title = "${color1}" .. ("Sa Sun Mo Tu We Th Fr\n") .. "$color"
+local title = "${color1}" .. ("Mo Tu We Th Fr Sa Su \n") .. "$color"
 io.write(title)
 
 local function seq(a,b)
@@ -27,23 +27,14 @@ local function seq(a,b)
     end
 end
 
-local function addEmptySpaceAfter(day)
-  if day < 10 then
-    return " %2d "
-  else
-    return " %2d"
-  end
-end
-
 local days = days_in_month[month]
-
 io.write(
-    string.format(
-        string.rep(" ", daystart-2) ..
+ string.format(
+        string.rep(" ", daystart - 1) ..
         string.rep(" %2d", days), seq(1,days)
-    ):gsub(string.rep(".",21),"%0\n")
-     :gsub(("%2d"):format(currentday),
-           (conky_color):format(currentday),
-           1
-     ) .. "\n"
+    )
+    :gsub(string.rep(".",21),"%0\n")
+     :gsub((" %2d"):format(currentday),
+           (conky_color):format(currentday)
+     )
 )

@@ -2,6 +2,7 @@
 
 conky -c $HOME/.config/conky/cpu &
 conky -c $HOME/.config/conky/memory &
+conky -c $HOME/.config/conky/video &
 conky -c $HOME/.config/conky/system &
 conky -c $HOME/.config.conky/calendar
 

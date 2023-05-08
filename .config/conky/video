@@ -1,3 +1,4 @@
+
 conky.config = {
 	background = false,
 	font = 'Bitstream Vera Sans:size=10',
@@ -21,7 +22,7 @@ conky.config = {
 	default_shade_color = '#dcb1cb',
 	alignment = 'top_right',
 	gap_x = 870,
-	gap_y = 650,
+	gap_y = 450,
 	no_buffers = true,
 	uppercase = false,
 	border_inner_margin = 15,
@@ -33,12 +34,12 @@ conky.config = {
 };
 
 conky.text = [[
-${color1}${font Oswald:size=10:bold}Memory ${color} ${hr 2}
-${voffset 5}${font sans-serif:bold:size=10}Kingstone${alignc -25}6000MT/s${alignr}1.1v
-${voffset 20}${color}Usage${font Bitstream Vera Sans:bold:size=10}$alignr$mem/$memmax
-${color3}${font Open Sans:size=5}
-${goto 40}${voffset 5}$color2${font Bitstream Vera Sans:bold:size=10}${top_mem name 1}$alignr$color${top_mem mem_res 1}
-${goto 40}$color2${top_mem name 2}$alignr$color${top_mem mem_res 2}
-${goto 40}$color2${top_mem name 3}$alignr$color${top_mem mem_res 3}
-${goto 40}$color2${top_mem name 4}$alignr$color${top_mem mem_res 4}
+${color1}${font Oswald:size=10:bold}Video ${color} ${hr 2}
+${voffset 5}${font sans-serif:bold:size=10}${execi 10000 glxinfo | grep "Device" | cut -b 13-33}$alignr${execi 10000 glxinfo | grep "Video memory" | cut -b 19-25}
+${goto 34}${voffset 5}$color2${font Bitstream Vera Sans:bold:size=10}
+${goto 34}${color2}FAN$alignr$color${exec sensors | grep "fan1" | cut -b 14-22}
+${goto 34}${color2}EDGE$alignr$color${exec sensors | grep "edge" | cut -b 15-22}
+${goto 34}${color2}JUNCTION$alignr$color${exec sensors | grep "junction" | cut -b 15-22}
+${goto 34}${color2}MEM$alignr$color${exec sensors | grep "mem" | cut -b 15-22}
+${goto 34}${color2}PPT$alignr$color${exec sensors | grep "PPT" | cut -b 14-21}
 ]];

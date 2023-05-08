@@ -19,11 +19,12 @@ conky.config = {
 	draw_borders = false,
 	draw_graph_borders = true,
 	default_shade_color = '#dcb1cb',
-	alignment = 'top_right',
-	gap_x = 870,
-	gap_y = 450,
+	alignment = 'top_left',
+	gap_x = 70,
+	gap_y = 50,
 	no_buffers = true,
 	uppercase = false,
+use_spacer = 'none',
 	border_inner_margin = 15,
 	default_color = 'F9FAF9',
 
@@ -39,5 +40,5 @@ $color${voffset -30}$color${font Bitstream Vera Sans:size=24}${time %b}$font\
 ${voffset -3} $color${font Bitstream Vera Sans:size=26}${time %Y}$font$color1$hr
 ${alignc}${font :size=28} ${time %k:%M %p}$font
 $font$color2
-${font Fira Mono:size=14}${execpi 3600 /home/nikolay/Projects/dotfiles/.config/conky/cal.lua}${font}
+${font Fira Mono:size=14}${execpi 3600 $HOME/.config/conky/cal.lua}${font}
 ]];
