@@ -1,6 +1,6 @@
 conky.config = {
 	background = false,
-	font = 'Bitstream Vera Sans:size=10',
+	font = 'ProFont IIx Nerd Font Mono:size=10',
 	use_xft = true,
 	xftalpha = 0.9,
 	update_interval = 2,
@@ -33,10 +33,10 @@ conky.config = {
 };
 
 conky.text = [[
-${voffset 10}$color2${font Bitstream Vera Sans:size=16}OS ${hr 2}
-${voffset 15}${font Bitstream Vera Sans:size=14}$alignr${execi 10000 awk -F= '/TION/ {print $2}' /etc/lsb-release |sed 's/"//g'} \
+${voffset 10}$color2${font ProFont IIx Nerd Font Mono:size=16}OS ${hr 2}
+${voffset 15}${font ProFont IIx Nerd Font Mono:size=14}$alignr${execi 10000 awk -F= '/TION/ {print $2}' /etc/lsb-release |sed 's/"//g'} \
 ${execi 10000 awk -F= '/EASE=/ {printf $2" "} /NAME/ {print $2}' /etc/lsb-release}
 ${voffset 10}${color2}${alignr}${execi 10000 whoami}@${nodename}
 ${alignr}${color2}uptime: ${color}${uptime_short}
-${voffset 5}${color2}${font Bitstream Vera Sans:size=14}${alignr}kernel: ${color}${kernel}
+${voffset 5}${color2}${font ProFont IIx Nerd Font Mono:size=14}${alignr}kernel: ${color}${kernel}
 ]];

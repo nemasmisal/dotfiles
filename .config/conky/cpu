@@ -1,6 +1,6 @@
 conky.config = {
 	background = false,
-	font = 'Bitstream Vera Sans:size=10',
+	font = 'ProFont IIx Nerd Font Mono:size=10',
 	use_xft = true,
 	xftalpha = 0.9,
 	update_interval = 2,
@@ -20,8 +20,8 @@ conky.config = {
 	draw_graph_borders = true,
 	default_shade_color = '#dcb1cb',
 	alignment = 'top_right',
-	gap_x = 220,
-	gap_y = 230,
+	gap_x = 140,
+	gap_y = 290,
 	no_buffers = true,
 	cpu_avg_samples = 24,
 	uppercase = false,
@@ -34,22 +34,22 @@ conky.config = {
 };
 
 conky.text = [[
-${color1}${font Oswald:size=10:bold}CPU ${color} ${hr 2}
-${voffset 5}${font Oswald:bold:size=10}${color1}${execi 3600 grep model /proc/cpuinfo | cut -d : -f2 | tail -1 | sed 's/\s//'}
-${color3}${font Open Sans:size=10}
-CPU Clock Speed: ${alignr}${font Oswald:bold:size=10}${freq_g} GHz
-${color3}${font Open Sans:size=10}
-Usage: ${alignr}${font Oswald:bold:size=10}$cpu%
-${color3}${font Open Sans:size=10}
-${color}Core 1:   ${cpu cpu1}% ${alignr}${color1}${cpubar cpu1 6,140}
-${color}Core 2:   ${cpu cpu2}% ${alignr}${color1}${cpubar cpu2 6,140}
-${color}Core 3:   ${cpu cpu3}% ${alignr}${color1}${cpubar cpu3 6,140}
-${color}Core 4:   ${cpu cpu4}% ${alignr}${color1}${cpubar cpu4 6,140}
-${color}Core 5:   ${cpu cpu5}% ${alignr}${color1}${cpubar cpu5 6,140}
-${color}Core 6:   ${cpu cpu6}% ${alignr}${color1}${cpubar cpu6 6,140}
-${color}Core 7:   ${cpu cpu7}% ${alignr}${color1}${cpubar cpu7 6,140}
-${color}Core 8:   ${cpu cpu8}% ${alignr}${color1}${cpubar cpu8 6,140}
-${color}Core 9:   ${cpu cpu9}% ${alignr}${color1}${cpubar cpu9 6,140}
+${color1}${font ProFont IIx Nerd Font Mono:size=10:bold}CPU ${color} ${hr 2}
+${voffset 5}${font ProFont IIx Nerd Font Mono:bold:size=10}${color1}${execi 3600 grep model /proc/cpuinfo | cut -d : -f2 | tail -1 | sed 's/\s//'}
+${color3}${font ProFont IIx Nerd Font Mono:size=10}
+${font ProFont IIx Nerd Font}CPU Clock Speed: ${alignr}${font ProFont IIx Nerd Font Mono:bold:size=10}${freq_g} GHz
+${color3}${font ProFont IIx Nerd Font Mono:size=10}
+${font ProFont IIx Nerd Font}Usage: ${alignr}${font ProFont IIx Nerd Font Mono:bold:size=10}$cpu%
+${color3}${font ProFont IIx Nerd Font Mono:size=10}
+${color}Core 1:  ${cpu cpu1}% ${alignr}${color1}${cpubar cpu1 6,140}
+${color}Core 2:  ${cpu cpu2}% ${alignr}${color1}${cpubar cpu2 6,140}
+${color}Core 3:  ${cpu cpu3}% ${alignr}${color1}${cpubar cpu3 6,140}
+${color}Core 4:  ${cpu cpu4}% ${alignr}${color1}${cpubar cpu4 6,140}
+${color}Core 5:  ${cpu cpu5}% ${alignr}${color1}${cpubar cpu5 6,140}
+${color}Core 6:  ${cpu cpu6}% ${alignr}${color1}${cpubar cpu6 6,140}
+${color}Core 7:  ${cpu cpu7}% ${alignr}${color1}${cpubar cpu7 6,140}
+${color}Core 8:  ${cpu cpu8}% ${alignr}${color1}${cpubar cpu8 6,140}
+${color}Core 9:  ${cpu cpu9}% ${alignr}${color1}${cpubar cpu9 6,140}
 ${color}Core 10: ${cpu cpu10}% ${alignr}${color1}${cpubar cpu10 6,140}
 ${color}Core 11: ${cpu cpu11}% ${alignr}${color1}${cpubar cpu11 6,140}
 ${color}Core 12: ${cpu cpu12}% ${alignr}${color1}${cpubar cpu12 6,140}

@@ -1,7 +1,7 @@
 
 conky.config = {
 	background = false,
-	font = 'Bitstream Vera Sans:size=10',
+	font = 'ProFont IIx Nerd Font Mono:size=10',
 	use_xft = true,
 	xftalpha = 0.9,
 	update_interval = 2,
@@ -34,9 +34,9 @@ conky.config = {
 };
 
 conky.text = [[
-${color1}${font Oswald:size=10:bold}Video ${color} ${hr 2}
-${voffset 5}${font sans-serif:bold:size=10}${execi 10000 glxinfo | grep "Device" | cut -b 13-33}$alignr${execi 10000 glxinfo | grep "Video memory" | cut -b 19-25}
-${goto 34}${voffset 5}$color2${font Bitstream Vera Sans:bold:size=10}
+${color1}${font ProFont IIx Nerd Font Mono:size=10:bold}Video ${color} ${hr 2}
+${voffset 5}${font ProFont IIx Nerd Font Mono:bold:size=10}${execi 10000 glxinfo | grep "Device" | cut -b 13-33}$alignr${execi 10000 glxinfo | grep "Video memory" | cut -b 19-25}
+${goto 34}${voffset 5}$color2${font ProFont IIx Nerd Font Mono:bold:size=10}
 ${goto 34}${color2}FAN$alignr$color${exec sensors | grep "fan1" | cut -b 14-22}
 ${goto 34}${color2}EDGE$alignr$color${exec sensors | grep "edge" | cut -b 15-22}
 ${goto 34}${color2}JUNCTION$alignr$color${exec sensors | grep "junction" | cut -b 15-22}

@@ -1,6 +1,6 @@
 conky.config = {
 	background = false,
-	font = 'Bitstream Vera Sans:size=10',
+	font = 'ProFont IIx Nerd Font Mono:size=10',
 	use_xft = true,
 	xftalpha = 0.9,
 	update_interval = 2,
@@ -33,11 +33,11 @@ conky.config = {
 };
 
 conky.text = [[
-${color1}${font Oswald:size=10:bold}Memory ${color} ${hr 2}
-${voffset 5}${font sans-serif:bold:size=10}Kingstone${alignc -25}6000MT/s${alignr}1.1v
-${voffset 20}${color}Usage${font Bitstream Vera Sans:bold:size=10}$alignr$mem/$memmax
-${color3}${font Open Sans:size=5}
-${goto 40}${voffset 5}$color2${font Bitstream Vera Sans:bold:size=10}${top_mem name 1}$alignr$color${top_mem mem_res 1}
+${color1}${font ProFont IIx Nerd Font Mono:size=10:bold}Memory ${color} ${hr 2}
+${voffset 5}${font ProFont IIx Nerd Font Mono:bold:size=10}Kingstone${alignc -25}6000MT/s${alignr}1.1v
+${voffset 20}${color}Usage${font ProFont IIx Nerd Font Mono:bold:size=10}$alignr$mem/$memmax
+${color3}${font ProFont IIx Nerd Font Mono:size=5}
+${goto 40}${voffset 5}$color2${font ProFont IIx Nerd Font Mono:bold:size=10}${top_mem name 1}$alignr$color${top_mem mem_res 1}
 ${goto 40}$color2${top_mem name 2}$alignr$color${top_mem mem_res 2}
 ${goto 40}$color2${top_mem name 3}$alignr$color${top_mem mem_res 3}
 ${goto 40}$color2${top_mem name 4}$alignr$color${top_mem mem_res 4}
