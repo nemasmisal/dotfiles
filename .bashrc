@@ -73,9 +73,9 @@ if ${use_color} ; then
 	fi
 
   if [[ ${EUID} == 0 ]] ; then
-    PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput sgr0)\]\[\033[38;5;6m\][\w\[$(tput sgr0)\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')]\n\\$\[$(tput sgr0)\]"
+    PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput sgr0)\][\[\033[38;5;6m\]\w\[$(tput sgr0)\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')]\n\\$\[$(tput sgr0)\]"
   else
-    PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput sgr0)\]\[\033[38;5;6m\][\w\[$(tput sgr0)\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')]\n\\$\[$(tput sgr0)\]"
+    PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput sgr0)\][\[\033[38;5;6m\]\w\[$(tput sgr0)\]\[\033[38;5;9m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')$(tput sgr0)]\n\$\[$(tput sgr0)\]"
   fi
 
 	alias ls='ls --color=auto'
@@ -96,7 +96,6 @@ unset use_color safe_term match_lhs sh
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-#alias np='nano -w PKGBUILD'
 #alias more=less
 
 xhost +local:root > /dev/null 2>&1
@@ -139,8 +138,17 @@ ex ()
   fi
 }
 
+# alias vim="gvim -v"
+alias vim="nvim"
+alias cal="cal -m -n 3"
+alias get-window-class="xprop"
+
+unset rc
+
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source /usr/share/bash-completion/completions/git

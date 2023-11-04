@@ -13,7 +13,7 @@ conky.config = {
 	own_window_argb_value = 30,
 	own_window_colour = '#bac3ce',
 	double_buffer = true,
-	minimum_width = 250,
+	minimum_width = 450,
 	draw_shades = false,
 	draw_outline = false,
 	draw_borders = false,
@@ -24,7 +24,6 @@ conky.config = {
 	gap_y = 50,
 	no_buffers = true,
 	uppercase = false,
-use_spacer = 'none',
 	border_inner_margin = 15,
 	default_color = 'F9FAF9',
 
@@ -33,12 +32,5 @@ use_spacer = 'none',
 };
 
 conky.text = [[
-${color1}${font Bitstream Vera Sans:size=12}Week$alignr$color${font Bitstream Vera Sans:size=20}${time %U}$font
-${voffset -8}$color1${font Bitstream Vera Sans:size=22}${time %A}$font\
-${voffset -8}$alignr$color${font Bitstream Vera Sans:size=42}${time %e}$font
-$color${voffset -30}$color${font Bitstream Vera Sans:size=24}${time %b}$font\
-${voffset -3} $color${font Bitstream Vera Sans:size=26}${time %Y}$font$color1$hr
-${alignc}${font :size=28} ${time %k:%M %p}$font
-$font$color2
-${font Fira Mono:size=14}${execpi 3600 $HOME/.config/conky/cal.lua}${font}
+${voffset 5}${font Oswald:bold:size=10}${color1}${execpi 3600 cal -m -3}
 ]];
