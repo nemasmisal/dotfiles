@@ -3,7 +3,7 @@ return {
 	build = ":TSUpdate",
 	cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
 	opts = {
-		ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "javascript", "html", "typescript" },
+		ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "javascript", "html", "typescript", "bash" },
 		sync_install = false,
 		auto_install = true,
 		highlight = { enable = true },
